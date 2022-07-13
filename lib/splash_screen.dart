@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SafeArea(
         child:Image(
                  
-                 image: AssetImage('assets/splashscreen.png'),height: double.infinity,
+                 image: AssetImage('assets/splashscreen.png'),fit: BoxFit.cover,
                ))
     );
   }

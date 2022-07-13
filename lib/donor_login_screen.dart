@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-import 'donor_profile_screen.dart';
-
 class Donor_login_screen extends StatefulWidget {
   Donor_login_screen({Key? key}) : super(key: key);
 
@@ -18,29 +16,16 @@ class Donor_login_screenState extends State<Donor_login_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
+      backgroundColor: Colors.red,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         toolbarHeight: 45,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
-                colors: [
-                  Colors.red,Colors.blue
-                ]
-                )),
-        ),
+        backgroundColor: Colors.red,
       ),
       body: SafeArea(
-     
+          child: Padding(
+        padding: const EdgeInsets.all(40),
         child: Container(
-          decoration: BoxDecoration(
-                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
-                colors: [
-                  Colors.red,Colors.blue
-                ]
-                )),
-          
             width: double.infinity,
             height: double.infinity,
             child: Column(children: [
@@ -59,7 +44,7 @@ class Donor_login_screenState extends State<Donor_login_screen> {
                 height: 50,
               ),
               Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: IntlPhoneField(
                     controller: TextEditingController(),
                     keyboardType: TextInputType.number,
@@ -107,10 +92,7 @@ class Donor_login_screenState extends State<Donor_login_screen> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Donor_profile_screen()));
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Login',
                       style: TextStyle(fontSize: 18),
@@ -121,9 +103,7 @@ class Donor_login_screenState extends State<Donor_login_screen> {
                         onPrimary: Colors.black,
                         shape: CircleBorder())),
               ),
-              SizedBox(
-                height: 50,
-              ),
+            //
               Text(
                 "Don't have an account?",
                 textAlign: TextAlign.center,
@@ -141,7 +121,7 @@ class Donor_login_screenState extends State<Donor_login_screen> {
                         decoration: TextDecoration.underline)),
               ),
             ])),
-      )
+      )),
     );
   }
 }
