@@ -14,16 +14,28 @@ class _Raise_request_screenState extends State<Raise_request_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     backgroundColor: Colors.red,
+    
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         toolbarHeight: 45,
-        backgroundColor: Colors.red,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
+                colors: [
+                  Colors.red,Colors.blue
+                ]
+                )),
+        ),
       ),
   body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(40),
+          
         child: Container(
+          decoration: BoxDecoration(
+                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
+                colors: [
+                  Colors.red,Colors.blue
+                ]
+                )),
             width: double.infinity,
             height: double.infinity,
             child: SingleChildScrollView(
@@ -112,7 +124,7 @@ class _Raise_request_screenState extends State<Raise_request_screen> {
                 
               ]),
             )),
-      ))
+      )
     );
   }
 }

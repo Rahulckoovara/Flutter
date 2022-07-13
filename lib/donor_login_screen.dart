@@ -18,16 +18,29 @@ class Donor_login_screenState extends State<Donor_login_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+     
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         toolbarHeight: 45,
-        backgroundColor: Colors.red,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
+                colors: [
+                  Colors.red,Colors.blue
+                ]
+                )),
+        ),
       ),
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(40),
+     
         child: Container(
+          decoration: BoxDecoration(
+                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
+                colors: [
+                  Colors.red,Colors.blue
+                ]
+                )),
+          
             width: double.infinity,
             height: double.infinity,
             child: Column(children: [
@@ -46,7 +59,7 @@ class Donor_login_screenState extends State<Donor_login_screen> {
                 height: 50,
               ),
               Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: IntlPhoneField(
                     controller: TextEditingController(),
                     keyboardType: TextInputType.number,
@@ -128,7 +141,7 @@ class Donor_login_screenState extends State<Donor_login_screen> {
                         decoration: TextDecoration.underline)),
               ),
             ])),
-      )),
+      )
     );
   }
 }

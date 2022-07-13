@@ -21,7 +21,14 @@ class _Donor_profile_screenState extends State<Donor_profile_screen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         toolbarHeight: 45,
-        backgroundColor: Colors.red,
+       flexibleSpace: Container(
+          decoration: BoxDecoration(
+                gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,
+                colors: [
+                  Colors.red,Colors.blue
+                ]
+                )),
+        ), backgroundColor: Colors.red,
         actions: <Widget>[
     IconButton(
       icon: Icon(
